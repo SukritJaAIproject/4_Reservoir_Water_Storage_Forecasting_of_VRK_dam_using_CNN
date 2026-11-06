@@ -43,10 +43,10 @@ Y_pred = model_2.predict(X_test)
 yp = y_scaler.inverse_transform(Y_pred)
 
 from sqlalchemy import create_engine
-user='root'
-pwd='opt#565784'
+user='YOUR_DB_USER'
+pwd='YOUR_DB_PASSWORD'
 dbname='predictive'
-host='10.211.1.25'
+host='YOUR_DB_HOST'
 port=3306
 con = create_engine(f'mysql+pymysql://{user}:{pwd}@{host}:{port}/{dbname}')
 
